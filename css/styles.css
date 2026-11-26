@@ -1,0 +1,93 @@
+/* Placeholder styles. Colors and type live in the variables below. */
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f4f5f7;
+  --text: #1c1f24;
+  --muted: #5b6270;
+  --accent: #1f5fbf;
+  --border: #e2e5ea;
+  --max: 64rem;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121418;
+    --bg-alt: #1a1d23;
+    --text: #e8eaee;
+    --muted: #9aa1ad;
+    --accent: #6ea2ff;
+    --border: #2a2e36;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-inline: 1.25rem;
+}
+
+a { color: var(--accent); }
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+.brand {
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+.site-header nav { display: flex; gap: 1.25rem; }
+.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a:hover { color: var(--text); }
+
+.hero { padding-block: 6rem 5rem; }
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.15;
+}
+.lede {
+  max-width: 36rem;
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+.section { padding-block: 3.5rem; }
+.section--alt { background: var(--bg-alt); }
+h2 { margin: 0 0 0.75rem; font-size: 1.5rem; }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.site-footer .wrap { padding-block: 1.5rem; }
